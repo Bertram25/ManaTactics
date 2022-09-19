@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/blockCornerSmall.obj-25dcc41b3848225b50b47e0e3729f098.mesh"
+
+[deps]
+
+files=[ "res://.import/blockCornerSmall.obj-25dcc41b3848225b50b47e0e3729f098.mesh" ]
+
+source_file="res://models/platformerKit/blockCornerSmall.obj"
+dest_files=[ "res://.import/blockCornerSmall.obj-25dcc41b3848225b50b47e0e3729f098.mesh", "res://.import/blockCornerSmall.obj-25dcc41b3848225b50b47e0e3729f098.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/blockHexagon.obj-5fdd6ad2bf2e6c9094b9f075118ef482.mesh"
+
+[deps]
+
+files=[ "res://.import/blockHexagon.obj-5fdd6ad2bf2e6c9094b9f075118ef482.mesh" ]
+
+source_file="res://models/platformerKit/blockHexagon.obj"
+dest_files=[ "res://.import/blockHexagon.obj-5fdd6ad2bf2e6c9094b9f075118ef482.mesh", "res://.import/blockHexagon.obj-5fdd6ad2bf2e6c9094b9f075118ef482.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

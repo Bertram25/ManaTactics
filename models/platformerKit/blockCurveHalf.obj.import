@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/blockCurveHalf.obj-4ea1b2a341b0535c06d316088f0f88ea.mesh"
+
+[deps]
+
+files=[ "res://.import/blockCurveHalf.obj-4ea1b2a341b0535c06d316088f0f88ea.mesh" ]
+
+source_file="res://models/platformerKit/blockCurveHalf.obj"
+dest_files=[ "res://.import/blockCurveHalf.obj-4ea1b2a341b0535c06d316088f0f88ea.mesh", "res://.import/blockCurveHalf.obj-4ea1b2a341b0535c06d316088f0f88ea.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

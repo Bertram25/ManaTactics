@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/flowersLow.obj-0361feaf39a3ef18bf767e0fffd92c5b.mesh"
+
+[deps]
+
+files=[ "res://.import/flowersLow.obj-0361feaf39a3ef18bf767e0fffd92c5b.mesh" ]
+
+source_file="res://models/platformerKit/flowersLow.obj"
+dest_files=[ "res://.import/flowersLow.obj-0361feaf39a3ef18bf767e0fffd92c5b.mesh", "res://.import/flowersLow.obj-0361feaf39a3ef18bf767e0fffd92c5b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

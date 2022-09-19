@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/spikeBlock.obj-0252c28c098607856c7651c0f0de2408.mesh"
+
+[deps]
+
+files=[ "res://.import/spikeBlock.obj-0252c28c098607856c7651c0f0de2408.mesh" ]
+
+source_file="res://models/platformerKit/spikeBlock.obj"
+dest_files=[ "res://.import/spikeBlock.obj-0252c28c098607856c7651c0f0de2408.mesh", "res://.import/spikeBlock.obj-0252c28c098607856c7651c0f0de2408.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

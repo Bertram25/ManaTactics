@@ -1,0 +1,28 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/levels/GeneratedLevel.cs" type="Script" id=1]
+[ext_resource path="res://shaders/white_shadermaterial.tres" type="Material" id=2]
+[ext_resource path="res://templates/BlockLarge.tscn" type="PackedScene" id=3]
+[ext_resource path="res://templates/TreePine.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/levels/LevelCamera.tscn" type="PackedScene" id=5]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="BoxShape" id=1]
+
+[node name="Level" type="Spatial"]
+script = ExtResource( 1 )
+terrainBase = ExtResource( 3 )
+pineTree = ExtResource( 4 )
+
+[node name="BaseBox" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 30, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="BaseBox"]
+material_override = ExtResource( 2 )
+mesh = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="BaseBox"]
+shape = SubResource( 1 )
+
+[node name="LevelCamera" parent="." instance=ExtResource( 5 )]

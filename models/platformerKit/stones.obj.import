@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/stones.obj-a32c81572cf63c6608eb5cf42c5d6f51.mesh"
+
+[deps]
+
+files=[ "res://.import/stones.obj-a32c81572cf63c6608eb5cf42c5d6f51.mesh" ]
+
+source_file="res://models/platformerKit/stones.obj"
+dest_files=[ "res://.import/stones.obj-a32c81572cf63c6608eb5cf42c5d6f51.mesh", "res://.import/stones.obj-a32c81572cf63c6608eb5cf42c5d6f51.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

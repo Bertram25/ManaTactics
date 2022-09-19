@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/saw.obj-11e4b18822cfe5e61ca3c0eb8744448c.mesh"
+
+[deps]
+
+files=[ "res://.import/saw.obj-11e4b18822cfe5e61ca3c0eb8744448c.mesh" ]
+
+source_file="res://models/platformerKit/saw.obj"
+dest_files=[ "res://.import/saw.obj-11e4b18822cfe5e61ca3c0eb8744448c.mesh", "res://.import/saw.obj-11e4b18822cfe5e61ca3c0eb8744448c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

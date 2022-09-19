@@ -1,0 +1,9 @@
+Licensing information:
+
+License meaning:
+CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/
+CC-BY-SA 3.0: http://creativecommons.org/licenses/by-sa/3.0/
+
+-- Files / Author / License / Source --
+universal-lpc-sprite_male_01_full.png / CC-BY-SA 3.0 / https://opengameart.org/content/universal-lpc-sprite-male-01
+models/platformerKit/* / Kenney / CC0 1.0 Universal / https://kenney.nl/assets/platformer-kit

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://models/platformerKit/blockLarge.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -0.916759, 0.769577, -1.13303, -1.00016, 0, -1.00016, -1.00016, 0.841425, -1.09155, -1.00016, 1, -1.00016, 0.916537, 0.769577, -1.13303, -1.00016, 0, 0.999939, -1.13303, 0.769577, -0.916759, -1.09155, 0.841425, -1.00016, 0.999939, 0, -1.00016, -1.00016, 1, 0.999939, 0.999939, 1, -1.00016, 0.999939, 0.841425, -1.09155, -0.916759, 0.769577, 1.13281, -1.00016, 0.841425, 1.09133, -1.09155, 0.841425, 0.999939, -1.13303, 0.769577, 0.916537, 0.999939, 0, 0.999939, 1.09133, 0.841425, -1.00016, 1.13281, 0.769577, -0.916759, 0.999939, 1, 0.999939, 0.916537, 0.769577, 1.13281, 1.13281, 0.769577, 0.916537, 1.09133, 0.841425, 0.999939, 0.999939, 0.841425, 1.09133 )
+
+[node name="BlockLarge" type="RigidBody"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+mesh = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+shape = SubResource( 1 )

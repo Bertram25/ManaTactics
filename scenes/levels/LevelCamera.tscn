@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/levels/LevelCamera.cs" type="Script" id=1]
+
+[node name="LevelCamera" type="Camera"]
+transform = Transform( 1, 0, 0, 0, 0.819152, 0.573577, 0, -0.573577, 0.819152, 15, 6, 30 )
+near = 0.1
+script = ExtResource( 1 )

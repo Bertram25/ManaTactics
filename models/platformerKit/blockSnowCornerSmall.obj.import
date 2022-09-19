@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/blockSnowCornerSmall.obj-9e049e8b2e13565a72ea830e1e41f3f7.mesh"
+
+[deps]
+
+files=[ "res://.import/blockSnowCornerSmall.obj-9e049e8b2e13565a72ea830e1e41f3f7.mesh" ]
+
+source_file="res://models/platformerKit/blockSnowCornerSmall.obj"
+dest_files=[ "res://.import/blockSnowCornerSmall.obj-9e049e8b2e13565a72ea830e1e41f3f7.mesh", "res://.import/blockSnowCornerSmall.obj-9e049e8b2e13565a72ea830e1e41f3f7.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

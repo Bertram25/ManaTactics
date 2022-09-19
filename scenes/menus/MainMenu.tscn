@@ -1,0 +1,27 @@
+[gd_scene format=2]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 6.0
+margin_right = 50.0
+margin_bottom = 12.0
+
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+margin_left = 700.0
+margin_top = 480.0
+margin_right = 1021.0
+margin_bottom = 593.0
+
+[node name="StartButton" type="Button" parent="VSplitContainer"]
+margin_right = 321.0
+margin_bottom = 113.0
+text = "Start"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 403.0
+margin_top = 238.0
+margin_right = 610.0
+margin_bottom = 294.0
+text = "My tactical rpg test project"

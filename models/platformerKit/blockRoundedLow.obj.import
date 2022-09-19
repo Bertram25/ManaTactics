@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/blockRoundedLow.obj-d260c45ff2a0898fb3d5c4f1ce4f8eab.mesh"
+
+[deps]
+
+files=[ "res://.import/blockRoundedLow.obj-d260c45ff2a0898fb3d5c4f1ce4f8eab.mesh" ]
+
+source_file="res://models/platformerKit/blockRoundedLow.obj"
+dest_files=[ "res://.import/blockRoundedLow.obj-d260c45ff2a0898fb3d5c4f1ce4f8eab.mesh", "res://.import/blockRoundedLow.obj-d260c45ff2a0898fb3d5c4f1ce4f8eab.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

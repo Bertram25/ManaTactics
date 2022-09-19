@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bomb.obj-9a7ebb194222d5a2ce896b0dc93f8868.mesh"
+
+[deps]
+
+files=[ "res://.import/bomb.obj-9a7ebb194222d5a2ce896b0dc93f8868.mesh" ]
+
+source_file="res://models/platformerKit/bomb.obj"
+dest_files=[ "res://.import/bomb.obj-9a7ebb194222d5a2ce896b0dc93f8868.mesh", "res://.import/bomb.obj-9a7ebb194222d5a2ce896b0dc93f8868.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

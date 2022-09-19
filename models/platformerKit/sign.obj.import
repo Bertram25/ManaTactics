@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/sign.obj-3e3c4f164d380572ad1f7a02740584fe.mesh"
+
+[deps]
+
+files=[ "res://.import/sign.obj-3e3c4f164d380572ad1f7a02740584fe.mesh" ]
+
+source_file="res://models/platformerKit/sign.obj"
+dest_files=[ "res://.import/sign.obj-3e3c4f164d380572ad1f7a02740584fe.mesh", "res://.import/sign.obj-3e3c4f164d380572ad1f7a02740584fe.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
