@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://characters/Character.cs" type="Script" id=1]
 [ext_resource path="res://characters/universal-lpc-sprite_male_01_full.png" type="Texture" id=2]
 [ext_resource path="res://characters/CameraPivot.cs" type="Script" id=3]
+[ext_resource path="res://characters/CharacterCamera.cs" type="Script" id=4]
 
 [sub_resource type="CapsuleShape" id=8]
 radius = 0.308101
@@ -107,6 +108,8 @@ tracks/0/keys = {
 "values": [ 105, 106, 107, 108, 109, 110, 111, 112 ]
 }
 
+[sub_resource type="PrismMesh" id=9]
+
 [node name="Character" type="KinematicBody"]
 script = ExtResource( 1 )
 
@@ -133,9 +136,14 @@ anims/walk_left = SubResource( 5 )
 anims/walk_right = SubResource( 7 )
 anims/walk_up = SubResource( 6 )
 
-[node name="CameraPivot" type="SpringArm" parent="."]
-spring_length = 7.0
-margin = 0.2
+[node name="CameraPivot" type="Spatial" parent="."]
 script = ExtResource( 3 )
+
+[node name="Camera" type="Camera" parent="CameraPivot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.04748, 2.47335 )
+script = ExtResource( 4 )
+
+[node name="MeshInstance" type="MeshInstance" parent="CameraPivot"]
+mesh = SubResource( 9 )
 
 [node name="FacingDirection" type="Spatial" parent="."]

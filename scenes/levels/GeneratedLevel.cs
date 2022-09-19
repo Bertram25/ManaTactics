@@ -18,6 +18,8 @@ public class GeneratedLevel : Spatial
 		var terrainInstance = terrainBase.Instance();
 		var pineTreeInstance = pineTree.Instance();
 		_camera = GetNode<LevelCamera>("LevelCamera");
+		_camera.Connect(nameof(LevelCamera.ReachedCharacter), this, "OnCharacterReached");
+
 		_characters = new Godot.Collections.Array<Character>();
 		
 		CreateBaseTerrain(terrainInstance, pineTreeInstance);
@@ -30,14 +32,21 @@ public class GeneratedLevel : Spatial
 	{
 		if (Input.IsActionJustPressed("ui_focus_next")) {
 			_characters[_selectionIndex].SetIsControlledByPlayer(false);
+			// Set camera to be the level camera again
+			_camera.SetAsActiveCamera();
 			
 			_selectionIndex++;
 			if (_selectionIndex >= _characters.Count) {
 				_selectionIndex = 0;
 			}
 			_camera.MoveViewToTarget(_characters[_selectionIndex]);
-			_characters[_selectionIndex].SetIsControlledByPlayer(true);
 		}
+	}
+	
+	// Called when a character has been reached
+	// and is ready to be either observed or controlled
+	public void OnCharacterReached(Character character) {
+		character.SetIsControlledByPlayer(true);
 	}
 	
 	private void CreateBaseTerrain(Node terrainBlock, Node treePine) {

@@ -19,7 +19,7 @@ public class Character : KinematicBody
 	private Vector3 _snapVector = Vector3.Down;
 
 	private Spatial _facingDirection;	
-	private SpringArm _springArm;
+	private Spatial _springArm;
 	private AnimationPlayer _animation;
 		
 	private bool _isPlayer = false;
@@ -28,7 +28,7 @@ public class Character : KinematicBody
 	public override void _Ready()
 	{
 		_facingDirection = GetNode<Spatial>("FacingDirection");
-		_springArm = GetNode<SpringArm>("CameraPivot");
+		_springArm = GetNode<Spatial>("CameraPivot");
 		_animation = GetNode<AnimationPlayer>("Sprite3D/AnimationPlayer");
 		
 		// Animate the character
@@ -48,6 +48,20 @@ public class Character : KinematicBody
 	
 	public void SetIsControlledByPlayer(bool isPlayer) {
 		_isPlayer = isPlayer;
+
+		if (_isPlayer) {
+			// Set 3rd person camera
+			var characterCamera = GetCharacterCamera();
+			characterCamera.SetAsActiveCamera();
+		}
+		else {
+			// Free mouse when the player is not using character anymore
+			Input.MouseMode = Input.MouseModeEnum.Visible;
+		}
+	}
+	
+	public CharacterCamera GetCharacterCamera() {
+		return GetNode<CharacterCamera>("CameraPivot/Camera");
 	}
 	
 	private void _PhysicsProcessPlayerControl(float delta) {
@@ -57,10 +71,8 @@ public class Character : KinematicBody
 		moveDirection.z = Input.GetActionStrength("ui_down") - Input.GetActionStrength("ui_up");
 		
 		// Rotate movement by current spring arm direction to make the movement fit the view
-		var activeCamera = GetViewport().GetCamera();
-		var rotationY = activeCamera.Rotation.y;
-		// FOR NOW: Follow the active camera rotation
-		//rotationY = _springArm.Rotation.y
+		// The spring arm must be aligned with the camera
+		float rotationY = GetViewport().GetCamera().Rotation.y - _springArm.Rotation.y;
 		moveDirection = moveDirection.Rotated(Vector3.Up, rotationY).Normalized();
 		
 		// Actually move the character now

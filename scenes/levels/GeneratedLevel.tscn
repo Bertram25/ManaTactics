@@ -26,3 +26,4 @@ mesh = SubResource( 2 )
 shape = SubResource( 1 )
 
 [node name="LevelCamera" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 0.819152, 0.573577, 0, -0.573577, 0.819152, 15, 6, 30 )
