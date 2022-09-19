@@ -8,6 +8,7 @@ public class LevelCamera : Camera
 	
 	// Distance at which the camera stops
 	private readonly float _proximity = 5f;
+	private readonly float _cameraElevation = 2f;
 	
 	// Speed factor at which the camera rotates.
 	private readonly float rotationSpeed = 6f;
@@ -44,7 +45,7 @@ public class LevelCamera : Camera
 		
 		// Move camera close to character
 		var targetPosition = target.Translation;
-		targetPosition.y = 2.0f;
+		targetPosition.y += _cameraElevation;
 		
 		var distance2 = targetPosition.DistanceSquaredTo(this.Translation);
 		
@@ -66,6 +67,7 @@ public class LevelCamera : Camera
 		var interpolatedDirection = this.Rotation.LinearInterpolate(directionCamera.Rotation, delta * rotationSpeed);
 		this.Rotation = new Vector3(this.Rotation.x, interpolatedDirection.y, this.Rotation.z);
 		
+		// TODO: The signal should be emitted when the camera has the right angle and right elevation
 		if (GetViewport().GetCamera() == this && target is Character character) {
 			if ((this.GlobalTranslation - target.GlobalTranslation).Length() < _proximity) {
 				// Tell the level we reached the character

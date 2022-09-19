@@ -22,9 +22,9 @@ public class CameraPivot : Spatial
 			return;
 		}
 		
-		// TODO: The camera pivot must be aligned with the camera once for this to work
-		// Also character movement must be fixed not to take into account that rotation anymore
-		/*if (inputEvent is InputEventMouseMotion mouseEvent) {
+		// Note: The camera pivot must be aligned with the camera once for this to work
+		// This is done in the character camera initialization
+		if (inputEvent is InputEventMouseMotion mouseEvent) {
 
 			// Handle mouse X axis to circle left and right
 			float mouseMovement = RotationDegrees.y - (mouseEvent.Relative.x * _mouseSensitivity);
@@ -34,9 +34,9 @@ public class CameraPivot : Spatial
 
 			// Handle mouse Y axis to circle up and down
 			mouseMovement = RotationDegrees.x - (mouseEvent.Relative.y * _mouseSensitivity);
-			mouseMovement = Mathf.Clamp(mouseMovement, -40f, 30f);
+			mouseMovement = Mathf.Clamp(mouseMovement, -8f, 20f);
 			//RotationDegrees.x = mouseMovement;
 			RotationDegrees = new Vector3(mouseMovement, RotationDegrees.y, RotationDegrees.z);
-		}*/
+		}
 	}
 }

@@ -71,8 +71,8 @@ public class Character : KinematicBody
 		moveDirection.z = Input.GetActionStrength("ui_down") - Input.GetActionStrength("ui_up");
 		
 		// Rotate movement by current spring arm direction to make the movement fit the view
-		// The spring arm must be aligned with the camera
-		float rotationY = GetViewport().GetCamera().Rotation.y - _springArm.Rotation.y;
+		// Note: the spring arm must be aligned with the camera
+		float rotationY = _springArm.Rotation.y;
 		moveDirection = moveDirection.Rotated(Vector3.Up, rotationY).Normalized();
 		
 		// Actually move the character now
