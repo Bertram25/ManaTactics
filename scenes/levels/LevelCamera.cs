@@ -9,7 +9,7 @@ public class LevelCamera : Camera
 	// Speed factor at which the camera rotates.
 	private readonly float rotationSpeed = 6f;
 	
-	// Selected target, use for chasing and viewing processes
+	// Selected target, use for chasing and viewing processes in the level view
 	private Spatial _selectedLookAtTarget;
 	
 	// Called when the node enters the scene tree for the first time.
@@ -23,19 +23,6 @@ public class LevelCamera : Camera
 		if (_selectedLookAtTarget != null) {
 			ProcessCameraToLookAt(_selectedLookAtTarget, delta);    
 		}
-	}
-	
-	public void SetCameraAsChaseCameraTo(Node target) {
-		var cameraPivot = target.GetNode<Spatial>("CameraPivot");
-		if (cameraPivot == null) {
-			cameraPivot = new Spatial();
-			cameraPivot.Name = "CameraPivot";
-			target.AddChild(cameraPivot);
-		}
-		
-		var cameraParent = this.GetParent();
-		cameraParent.RemoveChild(this);
-		cameraPivot.AddChild(this);
 	}
 	
 	public void MoveViewToTarget(Spatial target) {

@@ -9,7 +9,7 @@ public class GeneratedLevel : Spatial
 	private PackedScene pineTree;
 	
 	private LevelCamera _camera;
-	private Godot.Collections.Array<Spatial> _characters;
+	private Godot.Collections.Array<Character> _characters;
 	private int _selectionIndex = 0;
 
 	// Called when the node enters the scene tree for the first time.
@@ -18,7 +18,7 @@ public class GeneratedLevel : Spatial
 		var terrainInstance = terrainBase.Instance();
 		var pineTreeInstance = pineTree.Instance();
 		_camera = GetNode<LevelCamera>("LevelCamera");
-		_characters = new Godot.Collections.Array<Spatial>();
+		_characters = new Godot.Collections.Array<Character>();
 		
 		CreateBaseTerrain(terrainInstance, pineTreeInstance);
 		
@@ -28,12 +28,15 @@ public class GeneratedLevel : Spatial
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(float delta)
 	{
-		if (Input.IsActionPressed("ui_down")) {
+		if (Input.IsActionJustPressed("ui_focus_next")) {
+			_characters[_selectionIndex].SetIsControlledByPlayer(false);
+			
 			_selectionIndex++;
 			if (_selectionIndex >= _characters.Count) {
 				_selectionIndex = 0;
 			}
 			_camera.MoveViewToTarget(_characters[_selectionIndex]);
+			_characters[_selectionIndex].SetIsControlledByPlayer(true);
 		}
 	}
 	
@@ -63,7 +66,7 @@ public class GeneratedLevel : Spatial
 		var character = GD.Load<PackedScene>("res://characters/Character.tscn").Instance();
 
 		for (var number = 0; number < 30; ++number) {
-			var duplicate = character.Duplicate() as Spatial;
+			var duplicate = character.Duplicate() as Character;
 			
 			var characterLocation = new Vector3((float)GD.RandRange(0f, 30f), 0f, (float)GD.RandRange(0f, 30f));
 			
@@ -72,9 +75,7 @@ public class GeneratedLevel : Spatial
 			
 			AddChild(duplicate);
 			
-			_characters.Add(duplicate);		
+			_characters.Add(duplicate);
 		}
 	}
-	
-
 }
