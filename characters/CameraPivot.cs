@@ -25,18 +25,16 @@ public class CameraPivot : Spatial
 		// Note: The camera pivot must be aligned with the camera once for this to work
 		// This is done in the character camera initialization
 		if (inputEvent is InputEventMouseMotion mouseEvent) {
+			
+			// Handle mouse Y axis to circle up and down
+			float mouseMovementX = RotationDegrees.x - (mouseEvent.Relative.y * _mouseSensitivity);
+			mouseMovementX = Mathf.Clamp(mouseMovementX, -8f, 20f);
 
 			// Handle mouse X axis to circle left and right
-			float mouseMovement = RotationDegrees.y - (mouseEvent.Relative.x * _mouseSensitivity);
-			mouseMovement = Mathf.Wrap(mouseMovement, 0f, 360f);
-			//RotationDegrees.y = mouseMovement;
-			RotationDegrees = new Vector3(RotationDegrees.x, mouseMovement, RotationDegrees.z);
+			float mouseMovementY = RotationDegrees.y - (mouseEvent.Relative.x * _mouseSensitivity);
+			mouseMovementY = Mathf.Wrap(mouseMovementY, 0f, 360f);
 
-			// Handle mouse Y axis to circle up and down
-			mouseMovement = RotationDegrees.x - (mouseEvent.Relative.y * _mouseSensitivity);
-			mouseMovement = Mathf.Clamp(mouseMovement, -8f, 20f);
-			//RotationDegrees.x = mouseMovement;
-			RotationDegrees = new Vector3(mouseMovement, RotationDegrees.y, RotationDegrees.z);
+			RotationDegrees = new Vector3(mouseMovementX, mouseMovementY, RotationDegrees.z);
 		}
 	}
 }
